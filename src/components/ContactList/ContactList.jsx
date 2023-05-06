@@ -1,3 +1,5 @@
+import css from './ContactList.module.css';
+
 export const ContactList = ({ contacts, onDeleteContact }) => {
   return (
     <ul>
@@ -5,11 +7,11 @@ export const ContactList = ({ contacts, onDeleteContact }) => {
         <li key={id}>
           {name}: {number}
           <button
+            className={css.btn}
             type="button"
-            className="TodoList__btn"
             onClick={() => onDeleteContact(id)}
           >
-            Удалить
+            Delete
           </button>
         </li>
       ))}
